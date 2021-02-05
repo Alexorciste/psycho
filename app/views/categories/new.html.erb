@@ -1,0 +1,17 @@
+<h1>Categories#new</h1>
+
+<%= simple_form_for(@category) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name, :label => "name" %>
+    <%= f.input :description, :label => "description" %>
+    <%= f.input :photo, :label => "pic" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, :value => "Enregistrer", class: "btn btn-dark" %>
+    
+  </div>
+<% end %>

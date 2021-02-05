@@ -1,1 +1,15 @@
-<h1>View1</h1>
+<h1>Categories</h1>
+
+<div class="container">
+  <nav class="navmenu">
+  <% @categories.each do |category| %>
+    <li><%= link_to category.name, categories_path(name: category.name) %> </p></li>
+    
+    <%# <p> %>
+      <%# <%= link_to "Edit", edit_product_path(product) %> 
+      <%# <%= link_to "Delete", product_path(product), method: :delete, data: {confirm: "Are you sure?"} %>
+      <%# <%= button_to "Add #{product.name} to cart", line_items_path(:product_id => product.id) %> 
+    <%# </p> %>
+  <% end%>
+  </nav>
+</div>

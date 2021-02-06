@@ -1,0 +1,11 @@
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card-category{
+    
+    width: 350px;
+    height:250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }

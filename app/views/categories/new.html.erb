@@ -1,17 +1,14 @@
 <h1>Categories#new</h1>
 
-<%= simple_form_for(@category) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <%= f.input :name, :label => "name" %>
-    <%= f.input :description, :label => "description" %>
-    <%= f.input :photo, :label => "pic" %>
+  <div class = "row">
+    <div class = "col-4">
+      <%= simple_form_for(@category) do |f| %>
+        <%= f.input :name, label: "Nom" %>
+        <%= f.input :description, as: :text, :input_html => { :cols => 5, :rows => 6 } %>
+        
+        <%= f.input :photo, as: :file, label: "Ajoutez une photo" %>
+        <%= f.button :submit, "Mettre en location", class: "btn btn-dark" %>
+      <% end %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, :value => "Enregistrer", class: "btn btn-dark" %>
-    
-  </div>
-<% end %>

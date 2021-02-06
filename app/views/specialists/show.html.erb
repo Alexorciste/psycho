@@ -1,2 +1,12 @@
 <h1>Specialists#show</h1>
 <p>Find me in app/views/specialists/show.html.erb</p>
+
+<p>Name: <%= @specialist.firstname %> </ br><%= @specialist.lastname %></p>
+   <p>Spécialité <%= @specialist.profession %> </p>
+   <p>A propos: <%= @specialist.description %> </p>
+   <p>Note: <%= @specialist.rating %> </p>
+   <%= @specialist.category.name %>
+<% if @specialist.photo.attached? %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @specialist.photo.key, height: 300, width: 400, crop: :fill %>')">
+                <div>
+<% end %>

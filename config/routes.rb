@@ -5,12 +5,14 @@ Rails.application.routes.draw do
   root to: 'categories#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :categories do 
-    resources :specialists, only: [:index, :update, :new, :create]
+    resources :specialists, only: [:index, :show, :update, :new, :create] do
+      resources :consultations, only: [:index, :new, :create, :show] 
+    end
   end
 
-  scope shallow_prefix: "sekret" do
-    resources :specialists, only: [:edit, :show], shallow: true
-  end
+  resources :consultations, only: [:destroy] 
+  resources :specialist, only: [:destroy]
+  
 
 
 end

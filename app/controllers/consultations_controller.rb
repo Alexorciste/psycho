@@ -7,10 +7,12 @@ class ConsultationsController < ApplicationController
   def new
     @consultation = Consultation.new
     @specialist = Specialist.find(params[:specialist_id])
+    @category = Category.find(params[:category_id])
     
   end
 
   def create
+    @category = Category.find(params[:category_id])
     @specialist = Specialist.find(params[:specialist_id])
     @consultation = Consultation.new(consultation_params)
     
@@ -64,7 +66,7 @@ class ConsultationsController < ApplicationController
 
 
   def consultation_params
-    params.require(:consultation).permit(:date, :hour)
+    params.require(:consultation).permit(:date, :checkin, :hour)
   end
 end
 

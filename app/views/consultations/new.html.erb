@@ -4,7 +4,8 @@
 <div class = "container">
   <div class = "row">
     <div class = "col-md-4 offset-md-4">
-      <%= simple_form_for @consultation, url: category_specialist_consultations_path do |f|   %>
+      <%# <%= simple_form_for @consultation, url: category_specialist_consultations_path do |f|   %> 
+      <%= simple_form_for [@category, @specialist, @consultation] do |f|   %>
    
         <%= f.input :checkin, as: :date %>
         <%= f.input :hour, as: :time%>

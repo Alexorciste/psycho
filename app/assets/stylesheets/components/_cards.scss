@@ -1,7 +1,4 @@
-.cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+
   .card-category{
     
     width: 350px;
@@ -9,3 +6,141 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // justify-content: space-between;
+    height:auto;
+    padding-left: 2px;
+    padding-right: 2px;
+    width:73.3%;
+    background-color: white;
+    margin: auto;
+    
+    
+    }
+    
+    .cardbox1:hover {
+    opacity: 1;
+    }
+    
+    .cardbox2:hover {
+    opacity: 1;
+    }
+    
+    .cardbox3:hover {
+    opacity: 1;
+    }
+    
+    .cardbox1{
+    width:100%;
+    border-radius: 10px;
+    margin: 10px 10px 10px 0px;
+    box-shadow: 1px 0px 10px 0px grey;
+    background-color: white;
+    height: auto;
+    opacity: 0.9;
+    }
+    
+    
+    
+    .card1 {
+    width:100%;
+    height: 220px;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.3) 50%), url("../img/devil.jpg");
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    }
+    
+    .cardfoot1 {
+     border-radius: 10px;
+    background-color: white;
+    height: auto;
+    padding :0 5px 0 5px;
+    text-align: center;
+    
+    }
+    
+    
+    .cardbox2{
+    width:100%;
+    border-radius: 10px;
+    margin: 10px; 
+    box-shadow: 1px 0px 10px 0px grey;
+    background-color: white;
+    height: auto;
+    opacity: 0.9;
+    }
+    
+    .card2 {
+    width:100%;
+    height: 220px;
+    background:linear-gradient(135deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.3) 50%), url("../img/west.jpg");
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size:cover
+    }
+    .cardfoot2 {
+     border-radius: 10px;
+    background-color: white;
+    height: 75px;
+    padding :0 5px 0 5px;
+    text-align: center;
+    }
+    
+    
+    .cardbox3{
+    width:100%;
+    border-radius: 10px;
+    margin: 10px 0px 10px 10px;
+    box-shadow: 1px 0px 10px 0px grey;
+    background-color: white;
+    height: auto;
+    opacity: 0.9;
+    }
+    .card3 {
+    width:100%;
+    height: 220px;
+    background:linear-gradient(135deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.3) 50%), url("../img/exorc.png");
+    background-size:cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    }
+    .cardfoot3 {
+     border-radius: 10px;
+    background-color: white;
+    height: 75px;
+    padding :0 5px 0 5px;
+    text-align: center;
+    }
+    
+    
+    
+    
+    
+    
+    
+    .cards h2 {
+    color: black;
+    font-family: "Open sans";
+    font-size: 14px;
+    padding-left:3px;
+    font-weight: bold;
+    }
+    
+    .cards p{
+    color: black;
+    font-family: "Open sans";
+    font-size: 12px;
+    
+    }
+    
+    

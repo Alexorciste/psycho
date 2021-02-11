@@ -7,7 +7,7 @@
       <%# <%= simple_form_for @consultation, url: category_specialist_consultations_path do |f|   %> 
       <%= simple_form_for [@category, @specialist, @consultation] do |f|   %>
    
-        <%= f.input :checkin, as: :date %>
+        <%= f.input :date, as: :date %>
         <%= f.input :hour, as: :time%>
         <%= f.submit %>
       <% end %>

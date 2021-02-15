@@ -19,13 +19,14 @@
 
  <% end %>
 <br>
-Date d'arrivée :
-<%= consultation.checkin %><br/>
-Date de départ :
-<%= consultation.checkout %><br/>
-Prix du séjour :
-<%= consultation.price %>€<br/>
-<%# <%= link_to "Annuler cette reservation", consultation_path(consultation), method: :delete, data: { confirm: "Voulez-vous vraiment supprimer ?" } %> %>
+Date de consultation :
+<%= consultation.date %><br/>
+Heure :
+<%= consultation.hour %><br/>
+<%# Prix du séjour : %>
+<%# <%= consultation.price %>
+<%# €<br/> %> 
+<%# <%= link_to "Annuler cette reservation", consultation_path(consultation), method: :delete, data: { confirm: "Voulez-vous vraiment supprimer ?" } %> 
 <br>
 <% end %>
 </div>

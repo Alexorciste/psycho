@@ -1,32 +1,50 @@
-<h1>Categories</h1>
 
+<header class="header1">
+      
+      
+      
+      
+      <div class="banner" style="background-image: url(https://res.cloudinary.com/dsmxleyf5/image/upload/v1613166302/q47cd9idonhkeqiemnf7.jpg);">
+     <%# <nav class="navbar">
+        <div class="box">
+          <a href="index.html" class="box_item">Accueil</a>
+          <a href="fearbnb.html" class="box_item">Séminaires</a>
+          <a href="page3.html" class="box_item">Boutique</a>
+          <a id="fear" href="page4.html" class="box_item">Connexion</a>
+        </div>
+        <a class="btn2" href="skull.html"><i class="fas fa-skull"></i></a>
+      </nav> %>
+      <div class="container">
+          <h1>Psycho Inc.</h1>
+          <p>Quels que soient vos Démons..</p>
+          <p>Nous avons la solution</p>
+      <a class="btn btn-flat" href="#">Apply now</a>
+      </div>
+      </div>
+       
+      
+    </header>
+    
 <div class = "container">
     <div class="cards">
       <% @categories.each do |category| %>
-      <%#affiche uniquement les maisons du proprio <% if specialist.user == current_user %>
-      <div class="cardbox1">
-          <div class="card1">
-          <% if category.photo.attached? %>
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path category.photo.key, height: 300, width: 400, crop: :fill %>')">
-                <div>
-                  <p><%= link_to category.name, category_path(category) %></p>
-                </div>
-           </div>
+     
+        <div class="cardbox">
+            
+            <% if category.photo.attached? %>
+              <%= link_to category_path(category) do %>
+                  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path category.photo.key, crop: :fill %>')">
+                  </div>
+              <% end %>
 
-            <div class="cardfoot1">
-            <h2>  <%= category.name %> </h2>
-            <p> <%= category.description %></p>
-          </div>
+              <div class="cardfoot">
+                <h2>  <%= category.name %> </h2>
+                <p> <%= category.description %></p>
+              </div>
+        
+            <% end %>
         </div>
-
-    </div>
-        <% end %>
+        
       <% end %>
-
-
-      
-
-
-</div>
-
+    </div>
 </div>

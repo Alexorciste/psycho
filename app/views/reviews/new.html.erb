@@ -1,0 +1,13 @@
+<h1>Reviews#new</h1>
+
+<div class = "row">
+    <div class = "col-4">
+      <%= simple_form_for(@review) do |f| %>
+        <%= f.input :content, label: "avis" %>
+        <%= f.input :rating, as: :integer %>
+        
+        <%= f.input :photo, as: :file, label: "Ajoutez une photo" %>
+        <%= f.button :submit, "Mettre en location", class: "btn btn-dark" %>
+      <% end %>
+    </div>
+  </div>

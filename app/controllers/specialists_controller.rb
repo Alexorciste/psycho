@@ -42,6 +42,6 @@ class SpecialistsController < ApplicationController
   private
 
   def specialist_params
-    params.require(:specialist).permit(:lastname, :firstname, :profession, :description, :rating, :photo)
+    params.require(:specialist).permit(:lastname, :firstname, :profession, :description, :rating, :photos)
   end
 end

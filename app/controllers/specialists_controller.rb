@@ -25,12 +25,20 @@ class SpecialistsController < ApplicationController
 
   def edit
     @specialist = Specialist.find(params[:id])
+    @category = @specialist.category
+   
   end
 
   def update
+    
     @specialist = Specialist.find(params[:id])
-    @specialist.update(specialist_params)
-    redirect_to category_path
+    # @specialist.update(specialist_params)
+    if @specialist.update(specialist_params)
+      redirect_to category_path(@specialist.category), notice: 'Le texte a été modifié.'
+    else
+      render :edit
+    end
+    # redirect_to category_path(@category)
   end
 
   def destroy
@@ -42,6 +50,6 @@ class SpecialistsController < ApplicationController
   private
 
   def specialist_params
-    params.require(:specialist).permit(:lastname, :firstname, :profession, :description, :rating, :photos)
+    params.require(:specialist).permit(:lastname, :firstname, :profession, :description, :rating, photos: [])
   end
 end

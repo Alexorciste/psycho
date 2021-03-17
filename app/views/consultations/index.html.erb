@@ -1,13 +1,14 @@
-<h1>Vos réservations</h1>
+<h1>Votre rendez vous</h1>
 <div class = "col-4">
 <% @consultations.each do |consultation| %>
 <% specialist = Specialist.find(consultation.specialist_id) %>
-
-<% if specialist.photo.attached? %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3),
-          rgba(0,0,0,0.3)), url('<%= cl_image_path specialist.photo.key, height: 300, width: 400, crop: :fill %>')">
-            <%# <p> <%= link_to specialist.name, specialist_path(specialist) %></p> %>
-             </div>
+Avec :
+<%= specialist.lastname %>
+<%= specialist.firstname %>
+<% if specialist.photos.attached? %>
+            <%= image_tag specialist.photos[0] %>
+            <%# <p> <%= link_to specialist.name, specialist_path(specialist) %></p> 
+             
 
               <% else %>
 
@@ -23,9 +24,7 @@ Date de consultation :
 <%= consultation.date %><br/>
 Heure :
 <%= consultation.hour %><br/>
-<%# Prix du séjour : %>
-<%# <%= consultation.price %>
-<%# €<br/> %> 
+
 <%# <%= link_to "Annuler cette reservation", consultation_path(consultation), method: :delete, data: { confirm: "Voulez-vous vraiment supprimer ?" } %> 
 <br>
 <% end %>

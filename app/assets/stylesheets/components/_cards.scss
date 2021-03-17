@@ -1,7 +1,8 @@
 
   #reviews{
-    display:flex
-
+    display:flex;
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
   
   
@@ -22,9 +23,10 @@
     // height:auto;
     padding-left: 2px;
     padding-right: 2px;
-    
+    margin-top: 25px;
+
     background-color: white;
-    margin: auto;
+    // margin: auto;
     
     
     }
@@ -90,8 +92,11 @@
       background-position: center;
       padding: 150px 0;
       margin-bottom: 20px;
-      width: 100vw;
-      height: 56.4vw;
+      height: 25vw;
+      width: 77vw;
+      margin: auto;
+      margin-top: 10px;
+      border-radius: 10px;
     }
     
     .banner h1 {
@@ -149,4 +154,118 @@
     .footer .fa-heart {
       color: #D23333;
     }
+    
+    .dedbar {
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 50px;
+      
+        
+    }
+    
+    
+    /* box */
+    .box {
+      background-color: white;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      height: 60px;
+      width: auto;
+      box-shadow: 0px 0px 10px 0px white;
+      border: 0.5px solid grey;
+    }
+    
+    /* box_item */
+    .box_item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height:35px;
+      width: auto;
+      margin: auto;
+      border-right: 0.2px solid grey;
+      padding-right: 2em;
+      padding-left : 2em;
+      font-size : 11px;
+      font-family: Open sans;
+      box-shadow: 0;
+    }
+    
+    .box_item:last-child {
+      border-right: 0px;
+    }
+    
+    .box_item p {
+      color: black;
+    }
+    
+    .box_item:hover {
+      border-radius: 50px;
+      border-right: 0.2px solid white;
+      height:40px;
+      box-shadow: 1px 0px 50px 1px white;
+    }
+    
+    #fear {
+      padding-right: 10em;
+    }
+    .btn2 {
+      width: 54px;
+      height: 54px;
+      border-radius: 50px;
+      background-color: red;
+      color: white;
+      text-decoration: none;
+      font-size: 25px;
+      margin-left: -2.4em;
+      margin-top: 0.105em;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      opacity: 0.8;
+    }
+    
+    .btn2:hover {
+      opacity: 1;
+      box-shadow: 1px 0px 10px 1px red;
+      color: white;
+    }
+    
+    
+    .specialists{
+      position:absolute;
+      width:50%;
+      background-color:black;
+      opacity: 0.7;
+      color:white;
+      left:0;
+      top:0;
+    }
+
+    .card-review{
+      height: 130px;
+      width: 170px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+    .specialist-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
+     
+    }
+
+    .avatar-specialist{
+        
+        margin:auto;
+      img {
+        border-radius:50%;
+      }
+    }
+
     

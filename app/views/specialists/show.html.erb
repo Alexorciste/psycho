@@ -6,8 +6,8 @@
    <p>A propos: <%= @specialist.description %> </p>
    <p>Note: <%= @specialist.rating %> </p>
    <%= @specialist.category.name %>
-<% if @specialist.photo.attached? %>
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @specialist.photo.key, height: 300, width: 400, crop: :fill %>')">
-                <div>
+<% if @specialist.photos.attached? %>
+<% @specialist.photos.each do |photo| %>
+<%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>               
 <% end %>
-
+<% end %>

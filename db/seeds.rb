@@ -18,7 +18,7 @@ puts"Category created"
 lawyer_id = Category.find_by_name("Service Juridique").id
 
 #Milton
-spl1 = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615965749/p8x49gzjy1yvilebkjx5fyx3efj7.png")
+# spl1 = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615965749/p8x49gzjy1yvilebkjx5fyx3efj7.png")
 spl1bis = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615966234/qp03kps7klu207tixmlh9c6oxo19.png")
 
 lawyer1 = Specialist.create(firstname: "John", lastname: "Milton", profession: "Juriste",

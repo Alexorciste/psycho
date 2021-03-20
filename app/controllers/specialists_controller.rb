@@ -4,7 +4,7 @@ class SpecialistsController < ApplicationController
   end
 
   def show
-    # @category = Category.find(params[:category_id])
+    @category = Category.find(params[:category_id])
     @specialist = Specialist.find(params[:id])
   end
 

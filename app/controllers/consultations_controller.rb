@@ -6,8 +6,9 @@ class ConsultationsController < ApplicationController
 
   def new
     @consultation = Consultation.new
-    @specialist = Specialist.find(params[:specialist_id])
     @category = Category.find(params[:category_id])
+    @specialist = Specialist.find(params[:specialist_id])
+    
     
   end
 

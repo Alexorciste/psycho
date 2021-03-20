@@ -1,5 +1,5 @@
-<h1>Specialists#show</h1>
-<p>Find me in app/views/specialists/show.html.erb</p>
+
+
 
 <p>Name: <%= @specialist.firstname %> </ br><%= @specialist.lastname %></p>
    <p>Spécialité <%= @specialist.profession %> </p>
@@ -11,3 +11,6 @@
 <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>               
 <% end %>
 <% end %>
+
+<%= link_to "Prendre rendez vous", new_category_specialist_consultation_path(@category, @specialist), class: "btn btn-flat" %>
+<%# <%= render 'consultations/form_consult' %> 

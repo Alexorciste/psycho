@@ -13,30 +13,30 @@ Category.create(name: "Désinfection", description: "Une entité Maléfique a pr
 puts"Category created"
 
 #   Création des specialistes
-
+Specialist.destroy_all
 #   Création des juristes
 lawyer_id = Category.find_by_name("Service Juridique").id
 
 #Milton
 # spl1 = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615965749/p8x49gzjy1yvilebkjx5fyx3efj7.png")
-spl1bis = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615966234/qp03kps7klu207tixmlh9c6oxo19.png")
+# spl1bis = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615966234/qp03kps7klu207tixmlh9c6oxo19.png")
 
-lawyer1 = Specialist.create(firstname: "John", lastname: "Milton", profession: "Juriste",
-description: "Selon la croyance chrétienne traditionnelle sur la sorcellerie, le pacte est noué entre une personne et Satan (ou un moindre démon). La personne offre son âme en échange de faveurs diaboliques. Ces faveurs varient selon les contes, mais tendent à inclure la jeunesse, la connaissance, la richesse, la renommée, et/ou le pouvoir.", category_id: lawyer_id)
-lawyer1.photos.attach(io: spl1, filename: 'milton.jpg', content_type: 'image/jpg')
-lawyer1.photos.attach(io: spl1bis, filename: 'milton2.jpg', content_type: 'image/jpg')
-puts"..."
-#Belzeboss
-spl2 = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615966234/ju343ib9u6sayr4k8eberngr0ufn.jpg")
-spl2bis = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615919679/v3iy8t50h5p6jzkfsyh5qpyadg3q.jpg")
+# lawyer1 = Specialist.create(firstname: "John", lastname: "Milton", profession: "Juriste",
+# description: "Selon la croyance chrétienne traditionnelle sur la sorcellerie, le pacte est noué entre une personne et Satan (ou un moindre démon). La personne offre son âme en échange de faveurs diaboliques. Ces faveurs varient selon les contes, mais tendent à inclure la jeunesse, la connaissance, la richesse, la renommée, et/ou le pouvoir.", category_id: lawyer_id)
+# lawyer1.photos.attach(io: spl1, filename: 'milton.jpg', content_type: 'image/jpg')
+# lawyer1.photos.attach(io: spl1bis, filename: 'milton2.jpg', content_type: 'image/jpg')
+# puts"..."
+# #Belzeboss
+# spl2 = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615966234/ju343ib9u6sayr4k8eberngr0ufn.jpg")
+# spl2bis = URI.open("https://res.cloudinary.com/dsmxleyf5/image/upload/v1615919679/v3iy8t50h5p6jzkfsyh5qpyadg3q.jpg")
 
-lawyer2 = Specialist.create(firstname: "BelzeBoss", lastname: "", profession: "Juriste",
-description: "Yes, you are stuck, so out of luck, Now I'm complete and my jock you will pluck, This world will be mine and you're first in line
-You brought me the pick and now you shall both die!", category_id: lawyer_id)
-lawyer2.photos.attach(io: spl2, filename: 'belze.jpg', content_type: 'image/jpg')
-lawyer2.photos.attach(io: spl2bis, filename: 'boss.jpg', content_type: 'image/jpg')
+# lawyer2 = Specialist.create(firstname: "BelzeBoss", lastname: "", profession: "Juriste",
+# description: "Yes, you are stuck, so out of luck, Now I'm complete and my jock you will pluck, This world will be mine and you're first in line
+# You brought me the pick and now you shall both die!", category_id: lawyer_id)
+# lawyer2.photos.attach(io: spl2, filename: 'belze.jpg', content_type: 'image/jpg')
+# lawyer2.photos.attach(io: spl2bis, filename: 'boss.jpg', content_type: 'image/jpg')
 
-puts"Lawyers created"
+# puts"Lawyers created"
 
 #   Création du service médical
 doctor_id = Category.find_by_name("Expertise médicale").id

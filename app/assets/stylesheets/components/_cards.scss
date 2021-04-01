@@ -97,6 +97,9 @@
       margin: auto;
       margin-top: 10px;
       border-radius: 10px;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
     }
     
     .banner h1 {
@@ -177,6 +180,7 @@
       width: auto;
       box-shadow: 0px 0px 10px 0px white;
       border: 0.5px solid grey;
+     
     }
     
     /* box_item */
@@ -191,13 +195,12 @@
       padding-right: 2em;
       padding-left : 2em;
       font-size : 11px;
-      font-family: Open sans;
+      font-family: Montserrat;
       box-shadow: 0;
+
     }
     
-    .box_item:last-child {
-      border-right: 0px;
-    }
+    
     
     .box_item p {
       color: black;
@@ -211,7 +214,8 @@
     }
     
     #fear {
-      padding-right: 10em;
+      padding-right: 2em;
+      border-right:0;
     }
     .btn2 {
       width: 54px;
@@ -221,8 +225,9 @@
       color: white;
       text-decoration: none;
       font-size: 25px;
-      margin-left: -2.4em;
+      // margin-left: -2.4em;
       margin-top: 0.105em;
+      margin-right: 0.1em;
       display: flex;
       justify-content:center;
       align-items: center;
@@ -260,5 +265,27 @@
      
     }
 
+    .specialist-pannel{
+       display:none;
+      position:absolute;
+      top:0;
+      // left:0;
+      width:30%;
+      height:50vw;
+      transition: 0.6s;
+    }
+
+    .specialist-pannel.active{
+      z-index:666;
+      display:block;
+      position:absolute;
+      top:0;
+      // left:0;
+      width:30%;
+      background-color: black;
+      color:white;
+      transition: 0.6s;
+      opacity: 0.8;
+    }
     
-    
+  

@@ -2,21 +2,31 @@
 
 <div class="container">
   <h1 class="text-center"><%= @category.name %></h1>
-
-
+ 
+<%n=0 %>
   <div class="specialist-container">
   <% @category.specialists.each do |specialist|  %>
-
-    <% if specialist.photos.attached? %>
-    <div class="avatar-specialist">
-      <%= link_to category_specialist_path(@category, specialist) do %>
-        <%= image_tag specialist.photos[0]  %>
-        <div class="specialist-name"><%= specialist.firstname %> <%= specialist.lastname %> </div>
-        
-      <% end %>            
+    <%n = n+1 %>
+    <% if specialist.photos.attached? %> 
+      
+        <div class="avatar-specialist" id=<%= n %>>
+          <%# <%= link_to category_specialist_path(@category, specialist) do %>
+            <%= image_tag specialist.photos[0]  %>
+              <div class="specialist-name">
+                <%= specialist.firstname %> <%= specialist.lastname %>
+              </div>
+          <%# <% end %> 
+        </div>
     <% end%>
-    </div>
+    
+  <div class="specialist-pannel"id="spe<%= n %>">
+        <%= image_tag specialist.photos[1]  %>
+        <%= specialist.firstname %> <%= specialist.lastname %><br />
+        <%= specialist.profession %> <br />
+         <%= specialist.description %> 
+      </div>
   <% end%>
+  
   </div>
 
 </div>

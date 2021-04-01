@@ -24,11 +24,12 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
+import {openNav} from '../components/openshow';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
+  openNav();
   // Call your functions here, e.g:
   // initSelect2();
  

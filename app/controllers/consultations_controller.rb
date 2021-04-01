@@ -47,14 +47,19 @@ class ConsultationsController < ApplicationController
     # @consultation.price = days * p
 
     @consultation.user = current_user
-
-    if @consultation.save!
-      # redirect_to consultations_path
-      redirect_to  consultations_path
+    if @consultation.date > Date.today
+      if @consultation.save!
+        # redirect_to consultations_path
+        redirect_to  consultations_path
+      else
+        @consultation = Consultation.new
+        render :new
+      end
     else
       @consultation = Consultation.new
       render :new
     end
+
   end
 
   def update

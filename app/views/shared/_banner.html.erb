@@ -10,27 +10,26 @@
           <li class="box_item">Accueil</li>
           <li class ="box_item">Séminaires</li>
           <li class ="box_item">Vos avis</li>
-           <% if user_signed_in? %>
+      <% if user_signed_in? %>
           <li class ="box_item" id="fear">Déconnexion  </li>
            <%= link_to "", destroy_user_session_path, method: :delete, class: "fas fa-skull btn2" %>
                  
-         <% else %>
+      <% else %>
           <li class ="box_item" id="fear">Connexion  </li>
           <%= link_to "", new_user_session_path, class: "fas fa-skull btn2" %>
       <% end %>
-          <%# <a class="btn2" href="skull.html"><i class="fas fa-skull"></i></a> %>
         </div>
         
       </nav>
       
       <div class="container">
-          <h1>Psycho Inc.</h1>
-          <p>Quels que soient vos Démons..</p>
-          <p>Nous avons la solution</p>
+          <h1 class="text-center">Psycho Inc.</h1>
+          <p class="text-center">Quels que soient vos Démons..<br />
+          Nous avons la solution</p>
           
-            <%= link_to "Vos avis", reviews_path, class: "btn btn-flat" %>
+          <%= link_to "Vos avis", reviews_path, class: "btn btn-flat" %>
+   
       </div>
-            </div>
        
       
     </header>

@@ -3,7 +3,7 @@
 <div class="container">
   <h1 class="text-center"><%= @category.name %></h1>
  
-<%n=0 %>
+  <%n=0 %>
   <div class="specialist-container">
   <% @category.specialists.each do |specialist|  %>
     <%n = n+1 %>
@@ -20,17 +20,20 @@
     <% end%>
     
   <div class="specialist-pannel"id="spe<%= n %>">
-        <%= image_tag specialist.photos[1]  %>
+        <%= image_tag specialist.photos[1]  %><br />
         <%= specialist.firstname %> <%= specialist.lastname %><br />
         <%= specialist.profession %> <br />
-         <%= specialist.description %> 
-      </div>
+        <%= specialist.description %> 
+    <%= link_to "Prendre rendez vous", new_category_specialist_consultation_path(@category,specialist), class: "btn btn-flat" %>
+
+  </div>
+
   <% end%>
-  
+
   </div>
 
 </div>
-<%# <% end %> 
+ 
 
 
 

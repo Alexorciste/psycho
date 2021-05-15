@@ -7,9 +7,9 @@
       <div class="banner" style="background-image: url(https://res.cloudinary.com/dsmxleyf5/image/upload/v1613166302/q47cd9idonhkeqiemnf7.jpg);">
        <nav class="navbar">
         <div class="box">
-          <li class="box_item">Accueil</li>
-          <li class ="box_item">Séminaires</li>
-          <li class ="box_item">Vos avis</li>
+          <li class="box_item"><%= link_to "Accueil", root_path %></li>
+          <li class ="box_item"><%= link_to "Vos Rendez-vous", consultations_path %></li>
+          <li class ="box_item"><a href="https://haunted-bnb.herokuapp.com" target="_blank">HauntedBnB</a></li>
       <% if user_signed_in? %>
           <li class ="box_item" id="fear">Déconnexion  </li>
            <%= link_to "", destroy_user_session_path, method: :delete, class: "fas fa-skull btn2" %>

@@ -9,7 +9,7 @@
       <%= simple_form_for [@category, @specialist, @consultation] do |f|   %>
    
         <%= f.input :date, as: :date, label: "Date" %>
-        <%= f.input :hour, as: :time, label: "Horaire" %>
+        <%= f.input :hour, as: :time, step: 2, minute_step: 30, label: "Horaire" %>
         <%= f.button :submit, "Je prends rendez vous immédiatement !!!", class: "btn btn-flat" %> 
       <% end %>
     </div>

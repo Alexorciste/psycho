@@ -1,13 +1,14 @@
-<h1>Vos rendez vous</h1>
+<h1 class="text-center">Vos rendez vous</h1>
 
-<div class = "col-4">
+<div class = "text-center container">
 <% @consultations.each do |consultation| %>
 <% specialist = Specialist.find(consultation.specialist_id) %>
-Avec :
-<%= specialist.lastname %>
-<%= specialist.firstname %>
+
+<h2><%= specialist.firstname %></h2>
+<h2><%= specialist.lastname %></h2><br />
+
 <% if specialist.photos.attached? %>
-            <%= image_tag specialist.photos[0] %>
+            <div class="avatar-specialist text-center"><%= image_tag specialist.photos[0] %></div>
             <%# <p> <%= link_to specialist.name, specialist_path(specialist) %></p> 
              
 
@@ -24,7 +25,7 @@ Avec :
 Date de consultation :
 <%= consultation.date %><br/>
 Heure :
-<%= consultation.hour %><br/>
+<%= consultation.hour.strftime("%H:%M") %><br/>
 <% if consultation.date < Date.today %>
 <h3>rendez vous terminé</h3>
 <% end %>

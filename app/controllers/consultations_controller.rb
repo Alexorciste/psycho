@@ -47,21 +47,27 @@ class ConsultationsController < ApplicationController
     # @consultation.price = days * p
 
     @consultation.user = current_user
-    if @consultation.date > Date.today
-      if @consultation.save!
+    if @consultation.date <= Date.today 
+      flash[:alert] = "La date de consultation doit être supérieure à celle du jour"
+      @consultation = Consultation.new
+      render :new 
+    
+    else
+
+      if @consultation.save! 
         # redirect_to consultations_path
         redirect_to  consultations_path
       else
         @consultation = Consultation.new
         render :new
+       
       end
-    else
-      @consultation = Consultation.new
-      render :new
-    end
+      
+    end 
+    # && Consultation.all.exclude?(@consultation.date)==true
 
   end
-
+  
   def update
   end
 

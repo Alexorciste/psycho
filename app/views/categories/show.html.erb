@@ -21,9 +21,9 @@
     
   <div class="specialist-pannel"id="spe<%= n %>">
         <%= image_tag specialist.photos[1]  %><br />
-        <%= specialist.firstname %> <%= specialist.lastname %><br />
+        <h2><%= specialist.firstname %> <%= specialist.lastname %><br /></h2>
         <%= specialist.profession %> <br />
-        <%= specialist.description %> 
+        <div class="specialist-description"><%= specialist.description %> </div>
     <%= link_to "Prendre rendez vous", new_category_specialist_consultation_path(@category,specialist), class: "btn btn-flat" %>
 
   </div>

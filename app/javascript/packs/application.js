@@ -23,13 +23,16 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
+import flatpickr from "flatpickr";
 import "bootstrap";
 import {openNav} from '../components/openshow';
+import {toggleDateInputs} from '../components/booking';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   openNav();
+  toggleDateInputs()
   // Call your functions here, e.g:
   // initSelect2();
  

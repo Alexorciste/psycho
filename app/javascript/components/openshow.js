@@ -7,6 +7,8 @@ const openNav = () => {
     cardOfDead.forEach((specialist) => {
         
         const testId = document.getElementById(`${specialist.id}`)
+        if (testId) {
+
         testId.addEventListener("click", (event) => {
           
           const testPannel = document.getElementById(`spe${specialist.id}`)
@@ -21,10 +23,10 @@ const openNav = () => {
          
        });
 
-
+      }
     })
     
   
 };
-  
+
   export { openNav };

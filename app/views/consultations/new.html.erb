@@ -6,12 +6,34 @@
   <div class = "row">
     <div class = "col-md-4 offset-md-4">
       <%# <%= simple_form_for @consultation, url: category_specialist_consultations_path do |f|   %> 
-      <%= simple_form_for [@category, @specialist, @consultation] do |f|   %>
-   
-        <%= f.input :date, as: :date, label: "Date" %>
-        <%= f.input :hour, as: :time, step: 2, minute_step: 30, label: "Horaire" %>
-        <%= f.button :submit, "Je prends rendez vous immédiatement !!!", class: "btn btn-flat" %> 
-      <% end %>
+      
+     
+
+
+
+     
+
+<div id='specialist-consultation-dates' data-unavailable="<%= @specialist.unavailable_dates.to_json %>">
+    <%# <% if current_user.id != @category.user %> 
+       <%= simple_form_for [@category, @specialist, @consultation] do |f|   %>
+           <%= f.input :checkin, as: :string, type: :text %>
+           <%= f.input :checkout, as: :string, type: :text %>
+           <%= f.submit "Book", class: "btn btn-primary" %>
+      <%# <% end %>  
+    <% end %>
+ </div>
+
+
+
+
+
+
     </div>
   </div>
 </div>
+
+
+
+        <%# <%= f.input :date, as: :date, label: "Date" %>
+        <%# <%= f.input :hour, as: :time, start_hour: 7, end_hour: 19, step: 2, minute_step: 30, label: "Horaire" %> 
+        <%# <%= f.button :submit, "Je prends rendez vous immédiatement !!!", class: "btn btn-flat" %>

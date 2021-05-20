@@ -25,10 +25,11 @@
 Date de consultation :
 <%= consultation.date %><br/>
 Heure :
-<%= consultation.hour.strftime("%H:%M") %><br/>
-<% if consultation.date < Date.today %>
+<%# <%= consultation.hour.strftime("%H:%M") %>
+<br/>
+<%# <% if consultation.date < Date.today %> %>
 <h3>rendez vous terminé</h3>
-<% end %>
+<%# <% end %> %> %>
 
 <%# <%= link_to "Annuler cette reservation", consultation_path(consultation), method: :delete, data: { confirm: "Voulez-vous vraiment supprimer ?" } %> 
 <br>

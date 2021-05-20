@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :consultations
   has_many :reviews
+  has_many :categories, through: :consultations
 end

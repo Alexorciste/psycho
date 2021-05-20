@@ -4,7 +4,7 @@ class Consultation < ApplicationRecord
   belongs_to :specialist
   belongs_to :user, optional: true
 
-  validates :checkin, :checkout, presence: true, availability: true
+  validates :checkin, :checkout, presence: true
   validate :checkout_after_checkin
 
   private

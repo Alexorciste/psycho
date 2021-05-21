@@ -16,8 +16,8 @@
 <div id='specialist-consultation-dates' data-unavailable="<%= @specialist.unavailable_dates.to_json %>">
     <%# <% if current_user.id != @category.user %> 
        <%= simple_form_for [@category, @specialist, @consultation] do |f|   %>
-           <%= f.input :checkin, as: :string, type: :text %>
-           <%= f.input :checkout, as: :string, type: :text %>
+           <%= f.input :checkin, as: :string, type: :text, data: { behavior: "datepicker" } %>
+           <%= f.input :checkout, as: :string, type: :text, data: { behavior: "datepicker" } %>
            <%= f.submit "Book", class: "btn btn-primary" %>
       <%# <% end %>  
     <% end %>

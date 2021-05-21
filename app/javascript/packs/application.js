@@ -24,11 +24,11 @@ require("flatpickr/dist/flatpickr.css")
 
 // External imports
 import flatpickr from "flatpickr";
+import "controllers"
 import "bootstrap";
 import {openNav} from '../components/openshow';
 import {toggleDateInputs} from '../components/booking';
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   flatpickr("[data-behavior='flatpickr']", {
@@ -42,3 +42,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
  
 });
+
+import "controllers"

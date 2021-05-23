@@ -20,23 +20,23 @@ class ConsultationsController < ApplicationController
 
     @consultation.specialist = @specialist
 
-    # yin = params[:consultation]["date(1i)"].to_i
-    # min = params[:consultation]["date(2i)"].to_i
+    #  yin = params[:consultation]["date(1i)"].to_i
+    #  min = params[:consultation]["date(2i)"].to_i
     # din = params[:consultation]["date(3i)"].to_i
 
-    # @consultation.date = Date.new(yin,min,din)
+    # @consultation.date = Date.new
 
-    # yin = params[:journey]["checkin(1i)"].to_i
-    # min = params[:journey]["checkin(2i)"].to_i
-    # din = params[:journey]["checkin(3i)"].to_i
+  #   yin = params[:journey]["checkin(1i)"].to_i
+  #   min = params[:journey]["checkin(2i)"].to_i
+  #   din = params[:journey]["checkin(3i)"].to_i
 
-    # @consultation.checkin = Date.new(yin,min,din)
+  #  @consultation.checkin = Date.new
 
-    # yout = params[:journey]["checkout(1i)"].to_i
-    # mout = params[:journey]["checkout(2i)"].to_i
-    # dout = params[:journey]["checkout(3i)"].to_i
+  #  yout = params[:journey]["checkout(1i)"].to_i
+  #  mout = params[:journey]["checkout(2i)"].to_i
+  #  dout = params[:journey]["checkout(3i)"].to_i
 
-    # @consultation.checkout = Date.new(yout,mout,dout)
+#  @consultation.checkout = Date.new
     
     
     # yr = params[:consultation]["hour(1i)"].to_i
@@ -71,6 +71,7 @@ class ConsultationsController < ApplicationController
       if @consultation.save! 
         # redirect_to consultations_path
         redirect_to  consultations_path
+        
       else
         @consultation = Consultation.new
         render :new

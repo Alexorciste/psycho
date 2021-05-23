@@ -4,35 +4,37 @@
 <% @consultations.each do |consultation| %>
 <% specialist = Specialist.find(consultation.specialist_id) %>
 
-<h2><%= specialist.firstname %></h2>
-<h2><%= specialist.lastname %></h2><br />
+<h2><%= specialist.firstname %> <%= specialist.lastname %></h2>
+<br />
 
-<% if specialist.photos.attached? %>
-            <div class="avatar-specialist text-center"><%= image_tag specialist.photos[0] %></div>
-            <%# <p> <%= link_to specialist.name, specialist_path(specialist) %></p> 
-             
+  <% if specialist.photos.attached? %>
+              <div class="avatar-specialist text-center"><%= image_tag specialist.photos[0] %></div>
+              <%# <p> <%= link_to specialist.name, specialist_path(specialist) %></p> 
+              
 
-              <% else %>
+                <% else %>
 
-             <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3),
-          rgba(0,0,0,0.3)), url('https://www.businessnhmagazine.com/UploadedFiles/Articles/8151/66581491_m.jpg')">
-            <%# <p> <%= link_to specialist.name, specialist_path(specialist) %></p> %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)), url('https://www.businessnhmagazine.com/UploadedFiles/Articles/8151/66581491_m.jpg')">
+              <%# <p> <%= link_to specialist.name, specialist_path(specialist) %></p> 
 
-             </div>
+              </div>
 
- <% end %>
+  <% end %>
 <br>
-Date de consultation :
-<%= consultation.date %><br/>
-Heure :
-<%# <%= consultation.hour.strftime("%H:%M") %>
-<br/>
-<%# <% if consultation.date < Date.today %> %>
-<h3>rendez vous terminé</h3>
-<%# <% end %> %> %>
+Date de consultation :<br />
+Du <%=consultation.checkin.to_formatted_s(:rfc822)%> au <%=consultation.checkout.to_formatted_s(:rfc822) %> inclus<br/>
 
-<%# <%= link_to "Annuler cette reservation", consultation_path(consultation), method: :delete, data: { confirm: "Voulez-vous vraiment supprimer ?" } %> 
-<br>
+
+<% if consultation.checkout != nil && consultation.checkout < Date.today %> 
+ <h3>Rendez vous terminé</h3> 
+<% end %>  
+
+<%=((consultation.checkout- consultation.checkin).to_i)+1   %> jour<br />
+ 
+
+<%= link_to "Annuler cette reservation", consultation_path(consultation), method: :delete, data: { confirm: "Voulez-vous vraiment supprimer ?" } %> 
+<br /><br />
 <% end %>
 </div>
 
